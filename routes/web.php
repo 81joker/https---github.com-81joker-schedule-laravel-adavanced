@@ -48,7 +48,6 @@ Route::middleware(['auth','role:member'])->group(function() {
 });
 
 
-
 Route::get('/admin/dashboard', function () {
     return view('admin.dashboard');
 })->middleware(['auth','role:admin'])->name('admin.dashboard');
